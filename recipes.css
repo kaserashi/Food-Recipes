@@ -1,0 +1,45 @@
+body 
+{
+  background: grey url("bg15.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+td 
+{
+  padding: 0 20px;
+}
+
+img
+{
+	width:370px;
+	height:370px;
+	border-radius:60%;
+	padding-bottom: 20px;
+
+}
+ul
+{
+	margin-left: 150px;
+	color: white;
+}
+table
+{
+	color: white;
+}
+dl
+{
+	margin-left: 150px;
+	color: white;
+	margin-right: 65px;
+}
+dt
+{
+	color:orange;
+	margin-bottom: 5px;
+}
+.rp
+{
+	background-color: #996600;
+}

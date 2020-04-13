@@ -1,0 +1,99 @@
+<html>
+	<head>
+		<title>Food-Recipes</title>
+	    <link rel="stylesheet" type="text/css" href="CSS.css">
+	    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+	</head>
+	<body>
+	<div class="content">
+		<div class="navigation-bar" id="help">
+	      	<div id="navigation-container">
+		        <ul>
+		          	<li><a href="login.html">Login</a></li>
+		          	<li><a href = "signup.html">SignUp</a></li>
+		        </ul>
+		    </div>
+		</div> 
+		<div id="abc">
+			<h1><span style="color:#ff9900">F</span>ood<span style="color:#ff9900">(R)</span>ecipes</h1>
+			<p id="txt">
+				<br><br>
+				<h1 class="ml5">
+				  	<span class="text-wrapper">
+					    <span class="line line1"></span>
+					    <span style="color:#ff9900" class="letters letters-left">Enjoy Cooking</span>
+					    <span class="line line2"></span>
+				  	</span>
+				</h1>
+				<br><br><br>
+				<span style="font-size: 44px">Find everyday cooking   <br> inspiration<br> on Food Recipes</span>
+			</p>
+		</div>
+	</div>
+	<video id="videoBG" poster="poster.png" autoplay muted loop>
+		<source src="coffee.mp4" type="video/mp4">
+	</video>
+
+
+	
+
+
+	<script>
+		function timedText() 
+		{
+		  var x = document.getElementById("txt");
+		  setTimeout(function(){ x.value="2 seconds" }, 2000);
+		  setTimeout(function(){ x.value="4 seconds" }, 4000);
+		  setTimeout(function(){ x.value="6 seconds" }, 6000);
+		}
+
+
+		anime.timeline({loop: true})
+  .add({
+    targets: '.ml5 .line',
+    opacity: [0.5,1],
+    scaleX: [0, 1],
+    easing: "easeInOutExpo",
+    duration: 700
+  }).add({
+    targets: '.ml5 .line',
+    duration: 600,
+    easing: "easeOutExpo",
+    translateY: (el, i) => (-0.625 + 0.625*2*i) + "em"
+  }).add({
+    targets: '.ml5 .ampersand',
+    opacity: [0,1],
+    scaleY: [0.5, 1],
+    easing: "easeOutExpo",
+    duration: 600,
+    offset: '-=600'
+  }).add({
+    targets: '.ml5 .letters-left',
+    opacity: [0,1],
+    translateX: ["0.5em", 0],
+    easing: "easeOutExpo",
+    duration: 600,
+    offset: '-=300'
+  }).add({
+    targets: '.ml5 .letters-right',
+    opacity: [0,1],
+    translateX: ["-0.5em", 0],
+    easing: "easeOutExpo",
+    duration: 600,
+    offset: '-=600'
+  }).add({
+    targets: '.ml5',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
+
+	</script>
+
+
+
+
+	</body>
+</html>
